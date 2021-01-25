@@ -18,13 +18,13 @@ public class UserHelper extends  HelperBase{
     public void fillLoginFrom(User user) throws InterruptedException {
         type(By.id("user"),user.getEmail());
         Thread.sleep(2000);
-        click(By.id("Login"));
+        click(By.id("login"));
         type(By.id("password"), user.getPasswrod());
 
     }
 
     public void confirmLogin() {
-        click(By.cssSelector("login-submit"));
+        click(By.id("login-submit"));
     }
 
     public boolean isAvatarPresent() throws InterruptedException {
