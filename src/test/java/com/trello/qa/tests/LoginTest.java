@@ -10,8 +10,8 @@ public class LoginTest extends TestBase {
     public void testAtlassianUserLogin() throws InterruptedException {
         app.user().initLogin();
         app.user().fillLoginFrom(new User()
-                .setEmail("k.gogina@gmail.com")
-                .setPasswrod("Ukraine_2021"));
+                .setEmail(app.setEmail())
+                .setPasswrod(app.setPassword()));
         app.user().confirmLogin();
 
         Assert.assertTrue(app.user().isAvatarPresent());
